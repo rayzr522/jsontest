@@ -1,0 +1,11 @@
+main: me.rayzr522.jsontest.JSONTest
+
+name: ${project.name}
+description: ${project.description}
+version: ${project.version}
+author: Rayzr
+
+commands:
+  jsontest:
+    description: The main command for jsontest.
+    usage: "\u00A7cRayzr hecc'd something up."
