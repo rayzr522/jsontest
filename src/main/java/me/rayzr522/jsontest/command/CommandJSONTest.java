@@ -10,16 +10,10 @@ import me.rayzr522.jsonmessage.JSONMessage;
 import me.rayzr522.jsontest.JSONTest;
 
 public class CommandJSONTest implements CommandExecutor {
-    private final JSONTest plugin;
-
-    public CommandJSONTest(JSONTest plugin) {
-        this.plugin = plugin;
-    }
-
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(plugin.tr("command.fail.only-players"));
+            sender.sendMessage(ChatColor.RED + "Only players can use this.");
             return true;
         }
 
@@ -71,9 +65,5 @@ public class CommandJSONTest implements CommandExecutor {
                 .send(player);
 
         return true;
-    }
-
-    private void showUsage(CommandSender sender) {
-        sender.sendMessage(plugin.tr("command.jsontest.help.message"));
     }
 }

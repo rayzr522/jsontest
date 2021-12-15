@@ -7,6 +7,6 @@ import me.rayzr522.jsontest.command.CommandJSONTest;
 public class JSONTest extends JavaPlugin {
     @Override
     public void onEnable() {
-        getCommand("jsontest").setExecutor(new CommandJSONTest(this));
+        getCommand("jsontest").setExecutor(new CommandJSONTest());
     }
 }
